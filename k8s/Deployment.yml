@@ -1,0 +1,24 @@
+# This is deployment manifest file for vallentine project :-
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vallentine-deployment
+  namespace: vallentine-proj
+  labels:
+    app: vallentine-proj
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: vallentine-proj
+  template:
+    metadata:
+      labels:
+        app: vallentine-proj
+    spec:
+      containers:
+      - name: vallentine-proj
+        image: nitish7040/vallentine-project:latest
+        ports:
+        - containerPort: 3000

@@ -1,0 +1,14 @@
+# This services manifest file for valletine proj :------------
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: vallentine-service
+  namespace: vallentine-proj
+spec:
+  selector:
+    app: vallentine-proj
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 80

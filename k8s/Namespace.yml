@@ -1,0 +1,7 @@
+# Namespace for the Vallentine project
+
+kind: Namespace
+apiVersion: v1
+
+metadata:
+  name: vallentine-proj
